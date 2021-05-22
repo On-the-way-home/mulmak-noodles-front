@@ -1,17 +1,40 @@
 import { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
+import qs from "qs";
 import { Header } from "../components";
 import Taxi from "../assets/taxi.png";
+import { KAKAO_API } from "../api";
+import config from "../config";
 
 const MainPage = () => {
   const history = useHistory();
+  const location = useLocation();
+  const query = qs.parse(location.search, { ignoreQueryPrefix: true });
 
   useEffect(() => {
     //   FIXME
     // 로그인 시 name (카카오/네이버의 닉네임정보) 값을 로컬 스토리지에 저장한다고 가정한다.
     // 앱 실행 시 이 데이터가 없으면 로그인 페이지로 리다이렉트한다.
-    if (!localStorage.getItem("name")) {
-      history.push("/login");
+    if (!query.code && !localStorage.getItem("name")) history.push("/login");
+    if (query.code !== undefined) {
+      KAKAO_API.getToken(query.code)
+        .then((res) => {
+          window.Kakao.init(config.kakao.js_key);
+          window.Kakao.Auth.setAccessToken(res.data.access_token);
+          window.Kakao.API.request({
+            url: "/v2/user/me",
+            success: function (result) {
+              localStorage.setItem("name", result.properties.nickname);
+              history.push("/");
+            },
+            fail: function (error) {
+              console.log(error);
+            },
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   }, []);
 

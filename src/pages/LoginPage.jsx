@@ -1,8 +1,17 @@
 import Logo from "../assets/logo.png";
+import config from "../config";
 
 const LoginPage = () => {
   const handleClickKakao = () => {
-    // TODO
+    if (!window.Kakao.Auth) window.Kakao.init(config.kakao.js_key);
+
+    const params = {
+      redirectUri:
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:7777"
+          : config.server,
+    };
+    window.Kakao.Auth.authorize(params);
   };
 
   const handleClickNaver = () => {
@@ -45,7 +54,7 @@ const LoginPage = () => {
           style={{ position: "absolute", left: "14px" }}
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M612 1146.936c-9.941 0-18 6.256-18 13.973 0 4.8 3.117 9.03 7.863 11.546l-2 7.33a.736.736 0 0 0 1.127.79l8.754-5.806c.738.071 1.489.112 2.253.112 9.941 0 18-6.255 18-13.972s-8.059-13.973-18-13.973"
             opacity="0.902"
             transform="translate(-594 -1146.936)"
