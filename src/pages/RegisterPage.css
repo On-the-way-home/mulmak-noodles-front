@@ -2,6 +2,9 @@
     box-sizing: border-box
 }
 
+.register .search-bar{
+    position:relative;
+}
 .register .search {
     /* width: 368px; */
     width:100%;
@@ -13,6 +16,10 @@
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
   }
+
+.register .magnify-image{
+    position: absolute;
+} 
 
 .register .child-info label {
     /* width: 60px; */
@@ -29,6 +36,7 @@
     text-align: left;
     color: #7e84a3;
 } 
+
 
 .register .child-info .types input, .register .child-info .types select{
     /* width: 368px; */
@@ -88,7 +96,6 @@
     border : none;
     border-bottom: 0.5px solid #707070;
     background: transparent;
-    opacity: 0.4;
     font-family: SpoqaHanSans;
     font-size: 12px;
     font-weight: bold;
@@ -97,7 +104,6 @@
     line-height: normal;
     letter-spacing: 0.08px;
     text-align: left;
-    color: #7e84a3;
 }
 
 .register .pay-info .types input:focus{

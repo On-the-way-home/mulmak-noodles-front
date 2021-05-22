@@ -5,7 +5,9 @@ const RegisterPage = () => {
   return (
     <div className="register">
       <Header />
+      <div className="search-bar">
       <input type="search" className="search" placeholder="어린이집 검색"/>
+      </div>
       <div className="child-info">
       <div className="types name">
         <label for="input-name">아이 이름</label> <br/>
