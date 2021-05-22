@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <div onClick={handleClick} className="header">
-      <p style={{ cursor: "pointer", margin: 0 }}>{"오는 길"}</p>
+      <p style={{ fontFamily:"AppleSDGothicNeo", cursor: "pointer", margin: 0 }}>{"오는 길"}</p>
     </div>
   );
 };
