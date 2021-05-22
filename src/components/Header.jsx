@@ -1,5 +1,17 @@
+import { useHistory } from "react-router-dom";
+
 const Header = () => {
-  return <div className="header">{"오는 길"}</div>;
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push("/");
+  };
+
+  return (
+    <div onClick={handleClick} className="header">
+      <p style={{ cursor: "pointer", margin: 0 }}>{"오는 길"}</p>
+    </div>
+  );
 };
 
 export default Header;
