@@ -1,0 +1,13 @@
+.app {
+  max-width: 510px;
+  min-height: 100vh;
+  padding: 15px;
+  background: #f8efef;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  padding: 15px;
+  font-size: 24px;
+}
