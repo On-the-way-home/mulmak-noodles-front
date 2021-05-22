@@ -14,9 +14,6 @@ const LoginPage = () => {
     window.Kakao.Auth.authorize(params);
   };
 
-  const handleClickNaver = () => {
-    // TODO
-  };
   return (
     <div
       style={{
@@ -42,7 +39,7 @@ const LoginPage = () => {
           display: "flex",
           alignItems: "center",
           position: "relative",
-          margin: "118px 0 22px",
+          marginTop: 80,
         }}
         onClick={handleClickKakao}
       >
@@ -62,45 +59,6 @@ const LoginPage = () => {
         </svg>
 
         {"카카오 로그인"}
-      </div>
-      <div
-        style={{
-          cursor: "pointer",
-          background: "#1ec800",
-          color: "#fff",
-          width: "100%",
-          height: 56,
-          justifyContent: "center",
-          display: "flex",
-          alignItems: "center",
-          position: "relative",
-        }}
-        onClick={handleClickNaver}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="36"
-          height="36"
-          viewBox="0 0 36 36"
-          style={{ position: "absolute", left: "14px" }}
-        >
-          <g transform="translate(-269 -655.238)">
-            <rect
-              width="36"
-              height="36"
-              fill="#1ec800"
-              rx=".5"
-              transform="translate(269 655.238)"
-            />
-            <path
-              fill="#fff"
-              d="M313.991 690.351v9.287l-6.361-9.287h-6.877v18.407h6.854v-9.287l6.362 9.287h6.875v-18.407z"
-              transform="translate(-23.8 -26.318)"
-            />
-          </g>
-        </svg>
-
-        {"네이버 아이디로 로그인"}
       </div>
     </div>
   );
