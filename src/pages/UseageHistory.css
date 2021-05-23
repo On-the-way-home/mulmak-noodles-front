@@ -16,8 +16,25 @@
     border-radius : 10px
 }
 
+.react-calendar__month-view__days__day--weekend{
+    color:black
+}
+.react-calendar__month-view__days__day--neighboringMonth{
+    color:gray
+}
 
-
+.react-calendar__tile--now{
+    background-color:white
+}
+/* .react-calendar__tile.react-calendar__month-view__days__day{
+    background-color : #006edc
+}
+.react-calendar__tile.react-calendar__month-view__days__day:hover{
+    background-color : #006edc
+}
+.react-calendar__tile--active{
+    background-color : #006edc
+} */
 /* Month Summary */
 
 .useage-history .month-summary {

@@ -13,6 +13,7 @@ const MainPage = () => {
   const query = qs.parse(location.search, { ignoreQueryPrefix: true });
   const [childInfo, setChildInfo] = useState(null)
   const [useageInfo, setUseageInfo] = useState(null)
+  const [calendarInfo, setCalendarInfo] = useState(null)
   useEffect(() => {
     //   FIXME
     // 로그인 시 name (카카오/네이버의 닉네임정보) 값을 로컬 스토리지에 저장한다고 가정한다.
@@ -45,7 +46,8 @@ const MainPage = () => {
     .then(res => {
       setChildInfo(res.data.data.child)
       setUseageInfo({cost: res.data.data.cost, count : res.data.data.count})
-      console.log(res.data)
+      setCalendarInfo(res.data.data.calender)
+      console.log(res.data.data)
     })
   },[])
 
@@ -111,7 +113,7 @@ const MainPage = () => {
       <p style={{ fontFamily:"AppleSDGothicNeo", cursor: "pointer", marginTop: "30px" }}>{"등록현황"}</p>
       </div>
       {childInfo ? childInfo.map((elem, idx)=>{
-        return <ChildInfo key={idx} childData={elem} useageData={useageInfo}/>
+        return <ChildInfo key={idx} childData={elem} useageData={useageInfo} calendarData={calendarInfo}/>
       }) : <></>}
       </div>
     </div>
