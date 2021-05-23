@@ -1,5 +1,5 @@
 const config = {
-  server: "",
+  server: "https://junction-mulmak.herokuapp.com",
   kakao: {
     kauth_server: "https://kauth.kakao.com",
     admin_key: "8a1cf1287af2aa29123ff00ef0f9bc29",
