@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/mulmak/static/css/main.177f0311.chunk.css",
-    "main.js": "/mulmak/static/js/main.fb5c333f.chunk.js",
-    "main.js.map": "/mulmak/static/js/main.fb5c333f.chunk.js.map",
-    "runtime-main.js": "/mulmak/static/js/runtime-main.8444bdc5.js",
-    "runtime-main.js.map": "/mulmak/static/js/runtime-main.8444bdc5.js.map",
-    "static/css/2.8cebfa1f.chunk.css": "/mulmak/static/css/2.8cebfa1f.chunk.css",
-    "static/js/2.d37b8f11.chunk.js": "/mulmak/static/js/2.d37b8f11.chunk.js",
-    "static/js/2.d37b8f11.chunk.js.map": "/mulmak/static/js/2.d37b8f11.chunk.js.map",
-    "static/js/3.c985d324.chunk.js": "/mulmak/static/js/3.c985d324.chunk.js",
-    "static/js/3.c985d324.chunk.js.map": "/mulmak/static/js/3.c985d324.chunk.js.map",
-    "index.html": "/mulmak/index.html",
-    "static/css/2.8cebfa1f.chunk.css.map": "/mulmak/static/css/2.8cebfa1f.chunk.css.map",
-    "static/css/main.177f0311.chunk.css.map": "/mulmak/static/css/main.177f0311.chunk.css.map",
-    "static/js/2.d37b8f11.chunk.js.LICENSE.txt": "/mulmak/static/js/2.d37b8f11.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/mulmak/static/media/AppleSDGothicNeoB.4175a777.ttf"
+    "main.css": "/mulmak-noodles-front/static/css/main.8fe96ab2.chunk.css",
+    "main.js": "/mulmak-noodles-front/static/js/main.fb5c333f.chunk.js",
+    "main.js.map": "/mulmak-noodles-front/static/js/main.fb5c333f.chunk.js.map",
+    "runtime-main.js": "/mulmak-noodles-front/static/js/runtime-main.a1b6042a.js",
+    "runtime-main.js.map": "/mulmak-noodles-front/static/js/runtime-main.a1b6042a.js.map",
+    "static/css/2.8cebfa1f.chunk.css": "/mulmak-noodles-front/static/css/2.8cebfa1f.chunk.css",
+    "static/js/2.d37b8f11.chunk.js": "/mulmak-noodles-front/static/js/2.d37b8f11.chunk.js",
+    "static/js/2.d37b8f11.chunk.js.map": "/mulmak-noodles-front/static/js/2.d37b8f11.chunk.js.map",
+    "static/js/3.c985d324.chunk.js": "/mulmak-noodles-front/static/js/3.c985d324.chunk.js",
+    "static/js/3.c985d324.chunk.js.map": "/mulmak-noodles-front/static/js/3.c985d324.chunk.js.map",
+    "index.html": "/mulmak-noodles-front/index.html",
+    "static/css/2.8cebfa1f.chunk.css.map": "/mulmak-noodles-front/static/css/2.8cebfa1f.chunk.css.map",
+    "static/css/main.8fe96ab2.chunk.css.map": "/mulmak-noodles-front/static/css/main.8fe96ab2.chunk.css.map",
+    "static/js/2.d37b8f11.chunk.js.LICENSE.txt": "/mulmak-noodles-front/static/js/2.d37b8f11.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/mulmak-noodles-front/static/media/AppleSDGothicNeoB.4175a777.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.8444bdc5.js",
+    "static/js/runtime-main.a1b6042a.js",
     "static/css/2.8cebfa1f.chunk.css",
     "static/js/2.d37b8f11.chunk.js",
-    "static/css/main.177f0311.chunk.css",
+    "static/css/main.8fe96ab2.chunk.css",
     "static/js/main.fb5c333f.chunk.js"
   ]
 }
