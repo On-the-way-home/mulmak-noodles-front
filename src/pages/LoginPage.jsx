@@ -6,10 +6,7 @@ const LoginPage = () => {
     if (!window.Kakao.Auth) window.Kakao.init(config.kakao.js_key);
 
     const params = {
-      redirectUri:
-        process.env.NODE_ENV === "development"
-          ? "https://junction-mulmak.herokuapp.com/"
-          : config.server,
+      redirectUri:"https://junction-mulmak.herokuapp.com/"
     };
     window.Kakao.Auth.authorize(params);
   };
