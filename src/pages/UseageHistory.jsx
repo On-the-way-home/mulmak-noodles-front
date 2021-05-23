@@ -1,14 +1,24 @@
 import Calendar from "react-calendar"
 import { useHistory } from "react-router-dom";
+import {useEffect} from 'react'
 import 'react-calendar/dist/Calendar.css'
 import "./UseageHistory.css"
+
 const UseageHistory = ({location}) =>{
-    console.log(console.log(location))
+    console.log(location)
     const history = useHistory();
 
     const handleClick = () => {
       history.push("/");
     };
+   
+    useEffect(()=>{
+        const calendar = document.querySelectorAll('.react-calendar__tile.react-calendar__month-view__days__day')
+        location.state.calendarData.forEach((e,i)=>{
+            calendar[+e-1].style.backgroundColor = '#006edc'
+            calendar[+e-1].style.borderRadius = '50%'
+        })
+    })
 
     return (
         <div className="useage-history">

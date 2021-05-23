@@ -1,11 +1,11 @@
 import {Link} from 'react-router-dom';
 import "./ChildInfo.css"
-const ChildInfo = ({childData, useageData}) => {
+const ChildInfo = ({childData, useageData, calendarData}) => {
 
   return (
       
     <div className="saved-child">
-        <Link className="link" to={{pathname : "/history", state : {childData, useageData}}}>
+        <Link className="link" to={{pathname : "/history", state : {childData, useageData, calendarData}}}>
     <h3>{childData.childHouseName}</h3>
     <h3>{childData.childName} / {childData.gender} / {childData.age}세</h3>
     <div className="container">
