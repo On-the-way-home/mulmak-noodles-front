@@ -2,33 +2,6 @@
     box-sizing: border-box;
 }
 
-.useage-history .saved-child{
-    width: 368px;
-    margin: 30px auto;
-    /* padding: 17px 230px 17px 11px; */
-    padding : 10px;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffffff;
-}
-
-.useage-history .saved-child > h3{
-    margin: 10px 0;
-    opacity: 0.7;
-    font-family: AvenirNext;
-    font-size: 14px;
-    font-weight: 900;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.09px;
-    text-align: left;
-    color: #000000;
-}
-
-.useage-history .saved-child > h3:last-child{
-    opacity:0.5
-}
 
 /* Calendar */
 

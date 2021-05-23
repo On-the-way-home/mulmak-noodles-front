@@ -1,16 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import qs from "qs";
 import { Header } from "../components";
 import Taxi from "../assets/taxi.png";
 import { KAKAO_API } from "../api";
 import config from "../config";
-
+import ChildInfo from "../components/ChildInfo"
+import axios from "axios"
 const MainPage = () => {
   const history = useHistory();
   const location = useLocation();
   const query = qs.parse(location.search, { ignoreQueryPrefix: true });
-
+  const [childInfo, setChildInfo] = useState(null)
+  const [useageInfo, setUseageInfo] = useState(null)
   useEffect(() => {
     //   FIXME
     // 로그인 시 name (카카오/네이버의 닉네임정보) 값을 로컬 스토리지에 저장한다고 가정한다.
@@ -37,6 +39,15 @@ const MainPage = () => {
         });
     }
   }, []);
+
+  useEffect(()=>{
+    axios.get("http://13.124.255.171:4000/kid/1")
+    .then(res => {
+      setChildInfo(res.data.data.child)
+      setUseageInfo({cost: res.data.data.cost, count : res.data.data.count})
+      console.log(res.data)
+    })
+  },[])
 
   const handleClick = () => {
     history.push("/register");
@@ -92,6 +103,16 @@ const MainPage = () => {
         {
           "오는 길 서비스는 어린이집에서 늦게 귀가하는 아이들을 위한 서비스입니다. 부모님이 오는 길 서비스는 통해서 아이가 다니는 어린이집에 안심귀가 서비스를 등록해두시면 어린이집 교사가 주변에 사는 아이들끼리 텍시에 탑승하도록 지도하여 아이들이 안심하고  귀가할 수 있습니다."
         }
+      </div>
+
+      <div className="registerd">
+
+      <div className="header">
+      <p style={{ fontFamily:"AppleSDGothicNeo", cursor: "pointer", marginTop: "30px" }}>{"등록현황"}</p>
+      </div>
+      {childInfo ? childInfo.map((elem, idx)=>{
+        return <ChildInfo key={idx} childData={elem} useageData={useageInfo}/>
+      }) : <></>}
       </div>
     </div>
   );
