@@ -8,7 +8,7 @@ const LoginPage = () => {
     const params = {
       redirectUri:
         process.env.NODE_ENV === "development"
-          ? "http://localhost:7777"
+          ? "https://junction-mulmak.herokuapp.com/"
           : config.server,
     };
     window.Kakao.Auth.authorize(params);
